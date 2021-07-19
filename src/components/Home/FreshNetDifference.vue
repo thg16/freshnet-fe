@@ -3,7 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h2 class="main-title fnd-title">The fresh-net difference</h2>
+          <h2 class="main-title fnd-title">
+            One Platform, Thousands of Suppliers
+          </h2>
           <div class="fnd-content">
             <div class="fnd-content-info">
               <h3 class="fnd-subtitle">
@@ -34,7 +36,47 @@
               </div>
             </div>
             <div class="fnd-content-cards">
-              <h1>FAZER CARDS</h1>
+              <div class="pile-of-cards">
+                <div class="card-item card-3">
+                  <div class="content-card">
+                    <div class="img-card"><i class="fas fa-image"></i></div>
+                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
+                  </div>
+                  <div class="footer-card">
+                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
+                    <span class="icon"
+                      ><i class="fas fa-comment"></i> 1295</span
+                    >
+                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
+                  </div>
+                </div>
+                <div class="card-item card-2">
+                  <div class="content-card">
+                    <div class="img-card"><i class="fas fa-image"></i></div>
+                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
+                  </div>
+                  <div class="footer-card">
+                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
+                    <span class="icon"
+                      ><i class="fas fa-comment"></i> 1295</span
+                    >
+                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
+                  </div>
+                </div>
+                <div class="card-item card-1">
+                  <div class="content-card">
+                    <div class="img-card"><i class="fas fa-image"></i></div>
+                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
+                  </div>
+                  <div class="footer-card">
+                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
+                    <span class="icon"
+                      ><i class="fas fa-comment"></i> 1295</span
+                    >
+                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,6 +102,7 @@ export default {
   background: #fff;
   position: relative;
   flex-direction: column;
+  padding-bottom: 60px;
   .fnd-title {
     margin-bottom: 60px;
     font-size: 50px;
@@ -87,7 +130,8 @@ export default {
     gap: 50px;
     @media (min-width: 1200px) {
       flex-direction: row;
-      grid-gap: 0px;
+      // grid-gap: 0px;
+      grid-gap: 50px;
     }
     .fnd-content-info {
       text-align: right;
@@ -142,6 +186,98 @@ export default {
       &:last-child {
         h3 {
           color: $primary-blue;
+        }
+      }
+    }
+  }
+}
+.fnd-content-cards {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 550px;
+  .pile-of-cards {
+    position: relative;
+    .card-item {
+      box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.16);
+      border-radius: 20px;
+      padding: 15px;
+      width: 270px;
+      height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      position: absolute;
+      &.card-1 {
+        top: -15px;
+      }
+      &.card-2 {
+        background: #dff1f4;
+        transform: rotate(16.75deg);
+        left: 95px;
+        top: -30px;
+        .img-card {
+          background: #d81f44;
+        }
+      }
+      &.card-3 {
+        left: 203px;
+        top: -20px;
+        background: #dff1f4;
+        transform: rotate(36.1deg);
+        .img-card {
+          background: #5ccd62;
+        }
+      }
+    }
+    .img-card {
+      font-size: 106px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #21b3d1;
+      border-radius: 16px;
+      color: #fff;
+      padding: 36px 65px;
+    }
+    h2 {
+      font-size: 22px;
+      line-height: 27px;
+      color: #45595e;
+      margin-top: 15px;
+    }
+    .footer-card {
+      border-top: 1px solid #b1ccd0;
+      width: 100%;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-around;
+      color: #7f9498;
+      align-items: center;
+      font-size: 16px;
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        grid-gap: 5px;
+        cursor: pointer;
+        transition: all 0.4s;
+        &:hover {
+          color: #21b3d1;
+          transition: all 0.4s;
+        }
+        &:first-child:hover {
+          color: #d81f44;
+          transition: all 0.4s;
+        }
+        &:last-child:hover {
+          color: #f8b823;
+          transition: all 0.4s;
+        }
+        i {
+          font-size: 32px;
         }
       }
     }

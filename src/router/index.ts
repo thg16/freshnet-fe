@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
+import AdminRoutes from "./admin";
 
 const routes: Array<RouteRecordRaw> = [
+  ...AdminRoutes,
   {
     path: "/",
     name: "Home",
@@ -28,6 +30,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/resources",
     name: "Resources",
     component: () => import("../views/Resources.vue"),
+  },
+  {
+    path: "/privacy",
+    name: "Privacy Policy",
+    component: () => import("../views/Privacy.vue"),
+  },
+  {
+    path: "/terms",
+    name: "Terms and Conditions",
+    component: () => import("../views/Terms.vue"),
   },
 ];
 

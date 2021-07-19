@@ -80,24 +80,24 @@ export default {
     };
   },
   beforeMount() {
-    setInterval(() => {
-      let first = 375 + Math.random() * 50;
-      let second = 400 + Math.random() * 150;
-      let third = 150 + Math.random() * 200;
-      let fourth = 250 + Math.random() * 250;
-      this.redCoords = `M0,${first} C160,${second} 250,${third} 350,${fourth} L350,00 L0,0 Z`;
+    // setInterval(() => {
+    //   let first = 375 + Math.random() * 50;
+    //   let second = 400 + Math.random() * 150;
+    //   let third = 150 + Math.random() * 200;
+    //   let fourth = 250 + Math.random() * 250;
+    //   this.redCoords = `M0,${first} C160,${second} 250,${third} 350,${fourth} L350,00 L0,0 Z`;
 
-      first = 200 + Math.random() * 100;
-      second = 300 + Math.random() * 50;
-      third = 50 + Math.random() * 200;
-      fourth = 200 + Math.random() * 200;
-      this.greenCoords = `M0,${first} C160,${second} 250,${third} 350,${fourth} L350,00 L0,0 Z`;
+    //   first = 200 + Math.random() * 100;
+    //   second = 300 + Math.random() * 50;
+    //   third = 50 + Math.random() * 200;
+    //   fourth = 200 + Math.random() * 200;
+    //   this.greenCoords = `M0,${first} C160,${second} 250,${third} 350,${fourth} L350,00 L0,0 Z`;
 
-      first = 100 + Math.random() * 80;
-      second = 200 + Math.random() * 50;
-      third = 50 + Math.random() * 100;
-      this.yellowCoords = `M0,${first} C150,${second} 200,${third} 250,0 L250,00 L0,0 Z`;
-    }, 1000);
+    //   first = 100 + Math.random() * 80;
+    //   second = 200 + Math.random() * 50;
+    //   third = 50 + Math.random() * 100;
+    //   this.yellowCoords = `M0,${first} C150,${second} 200,${third} 250,0 L250,00 L0,0 Z`;
+    // }, 1000);
 
     setTimeout(() => {
       this.appear = true;

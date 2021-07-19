@@ -7,9 +7,9 @@
         <h1>{{ hero.title }}</h1>
         <h2>{{ hero.subtitle }}</h2>
 
-        <div class="big-input">
-          <input placeholder="Your email" />
-          <button>Sign up</button>
+        <div class="big-input" v-if="hero.placeholder && hero.button">
+          <input :placeholder="hero.placeholder" />
+          <button>{{ hero.button }}</button>
         </div>
       </div>
     </div>

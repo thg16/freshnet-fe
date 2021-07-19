@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "Slick Home",
+  name: "Slick FreshNet",
   components: {},
   data() {
     return {};

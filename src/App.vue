@@ -1,32 +1,55 @@
 <template>
-  <router-view v-slot="{ Component }">
-    <!-- <MainHeader /> -->
-    <transition name="fade" appear mode="out-in">
-      <component :is="Component" />
-    </transition>
-    <MainFooter />
-  </router-view>
+  <main :class="{ 'admin-page': isAdmin }">
 
-  <transition name="fade" mode="out-in" appear>
-    <Splash v-if="showSplash" />
-  </transition>
+    <AdminHeader v-if="isAdmin" />
+    <MainHeader v-else />
+
+    <!-- Vamos mover isso pra ca, beleza?!
+    <Hero :hero="hero" />
+    <WaveDivider />
+    -->
+    <router-view v-slot="{ Component }">
+      <transition name="fade" appear mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+
+    <MainFooter v-if="!isAdmin" />
+
+    <transition name="fade" mode="out-in" appear>
+      <Splash v-if="showSplash" />
+    </transition>
+  </main>
 </template>
 
 <script>
+import Hero from "@/components/General/Hero.vue";
 import Splash from "@/components/General/Splash.vue";
 import MainFooter from "@/components/General/MainFooter.vue";
 import MainHeader from "@/components/General/MainHeader.vue";
+import WaveDivider from "@/components/General/WaveDivider.vue";
+
+// Admin Components
+import AdminHeader from "@/components/General/Admin/AdminHeader.vue";
 
 export default {
   components: {
+    Hero,
     Splash,
     MainFooter,
     MainHeader,
+    WaveDivider,
+    AdminHeader,
   },
   data() {
     return {
       showSplash: true,
     };
+  },
+  computed: {
+    isAdmin() {
+      return this.$route.name && this.$route.name.includes('Admin.');
+    }
   },
   mounted() {
     setTimeout(() => {
@@ -40,6 +63,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mr+Dafoe&family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://use.fontawesome.com/releases/v5.15.3/css/all.css");
 @import "./scss/colors";
+@import "./scss/admin";
 
 body {
   overflow-x: hidden;
@@ -55,6 +79,18 @@ h3 {
   font-family: "Fredoka One", cursive;
   line-height: 1.5;
   text-align: center;
+
+  &.admin {
+    text-align: left;
+    color: #374F54;
+    margin-bottom: 52px;
+  }
+}
+
+h1 {
+  &.admin {
+    font-size: 1.5rem;
+  }
 }
 
 p,
@@ -118,9 +154,10 @@ h2 {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease;
 }
-.fade-enter,
+
+.fade-enter-from,
 .fade-leave-to {
   opacity: 0;
 }
@@ -128,4 +165,5 @@ h2 {
 .home {
   width: 100vw;
 }
+
 </style>

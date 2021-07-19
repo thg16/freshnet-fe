@@ -3,7 +3,9 @@
     <button type="submit" v-if="submit" :class="[activeColor]">
       {{ text }}
     </button>
-    <a v-else :href="{ link }" :class="[activeColor]">{{ text }}</a>
+    <router-link :to="{ link }" :class="[activeColor]" v-else>{{
+      text
+    }}</router-link>
   </div>
 </template>
 <script>

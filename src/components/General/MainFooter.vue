@@ -39,10 +39,10 @@
           <img src="../../assets/logo.png" class="logo" />
         </div>
         <nav class="privacy-links list-inline">
-          <router-link to="/" class="list-inline-item privacy-links-item"
+          <router-link to="/terms" class="list-inline-item privacy-links-item"
             >Terms of use</router-link
           >
-          <router-link to="/" class="list-inline-item privacy-links-item"
+          <router-link to="/privacy" class="list-inline-item privacy-links-item"
             >Privacy Policy</router-link
           >
           <router-link to="/" class="list-inline-item privacy-links-item"
