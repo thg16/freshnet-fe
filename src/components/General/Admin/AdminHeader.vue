@@ -15,6 +15,10 @@
         <font-awesome-icon icon="star" />
         <span class="bigger">Approved Sellers</span>
       </router-link>
+      <router-link class="nav-link promotions" :to="{ name: 'Admin.Promotions' }">
+        <font-awesome-icon icon="dollar-sign" />
+        <span>Promotions</span>
+      </router-link>
       <router-link class="nav-link orders" :to="{ name: 'Admin.Orders' }">
         <font-awesome-icon icon="calendar-alt" />
         <span>Orders</span>
@@ -23,23 +27,21 @@
         <font-awesome-icon icon="upload" />
         <span>Bulk Upload</span>
       </router-link>
-      <router-link class="nav-link clients" :to="{ name: 'Admin.Clients' }">
-        <font-awesome-icon icon="user" />
-        <span>Clients</span>
-      </router-link>
-      <router-link class="nav-link dashboard" :to="{ name: 'Admin.Home' }">
-        <font-awesome-icon icon="user-secret" />
-        <span>Dashboard</span>
-      </router-link>
-      <router-link class="nav-link dashboard" :to="{ name: 'Admin.Home' }">
-        <font-awesome-icon icon="user-secret" />
-        <span>Dashboard</span>
-      </router-link>
     </nav>
     <div class="profile">
-      <div class="alerts"></div>
-      <div class="config"></div>
-      <router-link class="user" :to="{ name: 'Admin.MyProfile' }"></router-link>
+      <div class="alerts">
+        <router-link class="nav-link orders" :to="{ name: 'Admin.Orders' }">
+          <font-awesome-icon icon="bell" />
+          <span>Alerts</span>
+        </router-link>
+      </div>
+      <div class="config">
+        <router-link class="nav-link bulk-upload" :to="{ name: 'Admin.BulkUpload' }">
+          <font-awesome-icon icon="cog" />
+          <span>Configurations</span>
+        </router-link>
+      </div>
+      <router-link class="user-pic" :to="{ name: 'Admin.MyProfile' }"></router-link>
     </div>
   </header>
 </template>
@@ -67,7 +69,24 @@ export default {
   left: 0;
   top: 0;
 
-  nav {
+  .profile {
+    height: 20vh;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+
+    .user-pic {
+      display: block;
+      width: 52px;
+      height: 52px;
+      background-color: #333;
+      border-radius: 50%;
+      margin: 16px auto 0;
+    }
+  }
+
+  nav, .alerts, .config {
 
     .logo {
       width: 80px;

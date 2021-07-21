@@ -38,6 +38,13 @@ export default {
           title: 'New Orders',
           value: 16,
         },
+        {
+          id: 4,
+          upsdowns: -7,
+          icon: 'shopping-cart',
+          title: 'New Orders',
+          value: 16,
+        },
       ],
     };
   }

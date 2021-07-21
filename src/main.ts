@@ -5,49 +5,54 @@ import { createApp } from "vue";
 // import "bootstrap-vue/dist/bootstrap-vue.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import VueAppear from 'vue-appear';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // Importing Icons
-import { faUserSecret } from '@fortawesome/free-solid-svg-icons';
-library.add(faUserSecret);
+import {
+  faUserSecret,
+  faChartBar,
+  faCubes,
+  faStar,
+  faCalendarAlt,
+  faUser,
+  faUpload,
+  faSearch,
+  faFilter,
+  faArrowUp,
+  faArrowDown,
+  faShoppingCart,
+  faDollarSign,
+  faCog,
+  faBell,
+  faEnvelope
+  } from '@fortawesome/free-solid-svg-icons';
 
-import { faChartBar } from '@fortawesome/free-solid-svg-icons';
-library.add(faChartBar);
-
-import { faCubes } from '@fortawesome/free-solid-svg-icons';
-library.add(faCubes);
-
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-library.add(faStar);
-
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
-library.add(faCalendarAlt);
-
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-library.add(faUser);
-
-import { faUpload } from '@fortawesome/free-solid-svg-icons';
-library.add(faUpload);
-
-// Importing Icons for Panels
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-library.add(faArrowUp);
-
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-library.add(faArrowDown);
-
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-library.add(faShoppingCart);
+library.add(faUserSecret,
+  faChartBar,
+  faCubes,
+  faStar,
+  faCalendarAlt,
+  faUser,
+  faUpload,
+  faSearch,
+  faFilter,
+  faArrowUp,
+  faArrowDown,
+  faShoppingCart,
+  faDollarSign,
+  faCog,
+  faBell,
+  faEnvelope,
+  faFacebook,
+  faInstagram,
+  faTwitter);
 
 import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 import store from "./store";
-
-
-library.add(faFacebook);
 
 const app = createApp(App)
   .use(store)

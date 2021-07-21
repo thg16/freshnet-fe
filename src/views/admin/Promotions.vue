@@ -1,15 +1,20 @@
 <template>
-  <div class="admin-approved">
-    <h1 class="admin">Approved</h1>
+  <div class="admin-promotions">
+    <h1 class="admin">Promotions</h1>
 
     <div class="row pre-table">
       <div class="col-auto">
-        <input type="text" class="pre-table-search" placeholder="Search your approved sellers...">
+        <input type="text" class="pre-table-search" placeholder="Search your promotions...">
         <button class="pre-table-search-button">
           <font-awesome-icon class="user-icon" icon="search" />
         </button>
       </div>
       <div class="col-auto"></div>
+      <div class="col text-right">
+        <router-link class="btn admin-btn" :to="{ name: 'Admin.Promotions' }">
+          New Promotion
+        </router-link>
+      </div>
     </div>
 
     <CustomTable :headers="headers" :content="content" />
@@ -21,7 +26,7 @@ import CustomTable from '@/components/General/Admin/CustomTable.vue';
 
 export default {
   components: { CustomTable },
-  name: "AdminApproved",
+  name: "AdminPromotions",
   data() {
     return {
       headers: [
@@ -30,8 +35,8 @@ export default {
           label: 'SKU'
         },
         {
-          id: 'approved-name',
-          label: 'Seller Name',
+          id: 'promotion-name',
+          label: 'Promotion Name',
           width: 30
         },
         {
@@ -54,7 +59,7 @@ export default {
       content: [
         {
           'sku': 'SKU',
-          'approved-name': 'Seller Name',
+          'promotion-name': 'Promotion Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',
@@ -62,7 +67,7 @@ export default {
         },
         {
           'sku': 'SKU',
-          'approved-name': 'Seller Name',
+          'promotion-name': 'Promotion Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',
@@ -70,7 +75,7 @@ export default {
         },
         {
           'sku': 'SKU',
-          'approved-name': 'Seller Name',
+          'promotion-name': 'Promotion Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',
@@ -78,7 +83,7 @@ export default {
         },
         {
           'sku': 'SKU',
-          'approved-name': 'Seller Name',
+          'promotion-name': 'Promotion Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',

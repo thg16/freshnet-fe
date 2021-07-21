@@ -166,4 +166,9 @@ h2 {
   width: 100vw;
 }
 
+.gray-divider {
+  border-top: 2px solid $light-gray;
+  margin: 25px 0;
+}
+
 </style>

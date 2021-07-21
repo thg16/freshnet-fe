@@ -16,6 +16,28 @@
               Vivamus maximus condimentum urna sed molestie. Cras varius dignissim ullamcorper.
               Morbi rhoncus suscipit leo, et imperdiet metus placerat nec."
             </div>
+
+            <div class="gray-divider"></div>
+
+            <div class="social-link email">
+              <font-awesome-icon :icon="['fas', 'envelope']" />
+              <span>thgsantos16@gmail.com</span>
+            </div>
+
+            <div class="social-link instagram">
+              <font-awesome-icon :icon="['fab', 'instagram']" />
+              <span>@thg.cruz</span>
+            </div>
+
+            <div class="social-link facebook">
+              <font-awesome-icon :icon="['fab', 'facebook']" />
+              <span>@thgsantos16</span>
+            </div>
+
+            <div class="social-link twitter">
+              <font-awesome-icon :icon="['fab', 'twitter']" />
+              <span>@thgcruz16</span>
+            </div>
           </div>
         </div>
         <div class="col"></div>
@@ -46,6 +68,7 @@ export default {
     background: #FFF;
     margin-top: 115px;
     border-radius: 34px;
+    color: $primary-gray;
 
     .col-auto {
       padding: 25px 70px;
@@ -73,6 +96,26 @@ export default {
         h2 {
           font-size: 2rem;
           text-align: left;
+        }
+
+        .username {
+          margin: -12px 0 25px;
+        }
+
+        .bio {
+          margin: 16px 0;
+          font-size: 90%;
+        }
+
+        .social-link {
+          font-size: 120%;
+          padding: 4px 0;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            margin: -1px 0 0 7px;
+          }
         }
       }
     }
