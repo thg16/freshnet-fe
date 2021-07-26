@@ -27,7 +27,7 @@ import {
   faCog,
   faBell,
   faEnvelope
-  } from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 
 library.add(faUserSecret,
   faChartBar,

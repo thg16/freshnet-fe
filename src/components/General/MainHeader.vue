@@ -44,10 +44,12 @@
                     >
                   </li>
                   <li class="nav-item">
-                    <router-link to="/" class="nav-link">Log In</router-link>
+                    <div @click="setLogin" class="nav-link">Log In</div>
                   </li>
                   <li class="nav-item signin">
-                    <ButtonDefault text="Sign in" href="#" class="" />
+                    <!-- <div @click="setRegister"> -->
+                    <ButtonDefault text="Sign in" @click="setRegister" />
+                    <!-- </div> -->
                   </li>
                 </ul>
               </div>
@@ -138,17 +140,32 @@
       </div>
     </div>
   </header>
+  <div class="login" v-if="!!login"><LoginRegister login /></div>
+  <div class="register" v-if="!!register"><LoginRegister register /></div>
 </template>
 
 <script>
 import ButtonDefault from "@/components/Helpers/Button.vue";
+import LoginRegister from "@/components/General/LoginRegister.vue";
 export default {
   name: "MainHeader",
-  components: { ButtonDefault },
+  components: { LoginRegister, ButtonDefault },
   data() {
     return {
       isLogged: false,
+      login: false,
+      register: false,
     };
+  },
+  methods: {
+    setLogin() {
+      this.login = true;
+      this.register = false;
+    },
+    setRegister() {
+      this.login = false;
+      this.register = true;
+    },
   },
 };
 </script>
