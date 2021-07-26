@@ -1,5 +1,5 @@
 <template>
-  <div class="animated-bg">
+  <div class="animated-bg" :class="{ overlay: overlay }">
     <div class="blue-bg" />
     <div class="wave red" :class="{ show: appear }">
       <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
@@ -71,6 +71,12 @@
 export default {
   name: "AnimatedBG",
   components: {},
+  props: {
+    overlay: {
+      type: Boolean,
+      default: false
+    },
+  },
   data() {
     return {
       redCoords: "M0,400 C160,450 250,200 350,250 L350,00 L0,0 Z",
@@ -107,6 +113,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.animated-bg.overlay {
+  z-index: 9999;
+}
+
 .blue-bg {
   background: url(../../assets/blue-bg.jpg);
   position: fixed;

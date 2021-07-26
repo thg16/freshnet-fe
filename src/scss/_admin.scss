@@ -40,4 +40,31 @@
         color: #FFF;
         border-radius: 35px;
     }
+
+    .full-width-input {        
+        background-color: #FFF;
+        border: none;
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.05);
+        font-size: 34px;
+        font-weight: 300;
+        outline: none;
+        padding: 22px 88px 24px 24px;
+        border-radius: 61px;
+        width: 100%;
+    }
+
+    .full-width-button {
+        background-color: $primary-blue;
+        border: none;
+        font-size: 24px;
+        font-family: 'Fredoka One', cursive;
+        font-weight: 400;
+        outline: none;
+        padding: 21px 43px;
+        color: #FFF;
+        border-radius: 45px;
+        margin-top: -88px;
+        margin-bottom: 70px;
+        margin-right: calc(-100% + 180px);        
+    }
 }

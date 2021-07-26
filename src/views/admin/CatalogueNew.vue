@@ -1,32 +1,24 @@
 <template>
-  <div class="admin-catalogue">
-    <h1 class="admin">Catalogue</h1>
+  <div class="admin-promotions">
+    <h1 class="admin">New Product</h1>
 
     <div class="row pre-table">
-      <div class="col-auto">
-        <input type="text" class="pre-table-search" placeholder="Search your products...">
-        <button class="pre-table-search-button">
-          <font-awesome-icon class="user-icon" icon="search" />
-        </button>
-      </div>
+      <div class="col-auto"></div>
       <div class="col-auto"></div>
       <div class="col text-right">
-        <router-link class="btn admin-btn" :to="{ name: 'Admin.Catalogue.New' }">
-          New Product
+        <router-link class="btn admin-btn" :to="{ name: 'Admin.Catalogue' }">
+          Save Product
         </router-link>
       </div>
     </div>
-
-    <CustomTable :headers="headers" :content="content" />
   </div>
 </template>
 
 <script>
-import CustomTable from '@/components/General/Admin/CustomTable.vue';
 
 export default {
-  components: { CustomTable },
-  name: "AdminCatalogue",
+  components: { },
+  name: "AdminCatalogueNew",
   data() {
     return {
       headers: [
@@ -35,7 +27,7 @@ export default {
           label: 'SKU'
         },
         {
-          id: 'product-name',
+          id: 'promotion-name',
           label: 'Product Name',
           width: 30
         },
@@ -59,7 +51,7 @@ export default {
       content: [
         {
           'sku': 'SKU',
-          'product-name': 'Product Name',
+          'promotion-name': 'Product Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',
@@ -67,7 +59,7 @@ export default {
         },
         {
           'sku': 'SKU',
-          'product-name': 'Product Name',
+          'promotion-name': 'Product Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',
@@ -75,7 +67,7 @@ export default {
         },
         {
           'sku': 'SKU',
-          'product-name': 'Product Name',
+          'promotion-name': 'Product Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',
@@ -83,7 +75,7 @@ export default {
         },
         {
           'sku': 'SKU',
-          'product-name': 'Product Name',
+          'promotion-name': 'Product Name',
           'category': 'Category',
           'sub-category': 'Sub Category',
           'price': 'Price',

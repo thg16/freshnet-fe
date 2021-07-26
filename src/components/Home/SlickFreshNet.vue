@@ -6,6 +6,15 @@
           <h2 class="main-title">
             Join our growing community and buy through Fresh-net today
           </h2>
+
+          <!-- <VueSlickCarousel class="multiple-items">
+            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
+            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
+            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
+            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
+            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
+            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
+          </VueSlickCarousel> -->
           <div class="multiple-items">
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
@@ -21,9 +30,15 @@
 </template>
 
 <script>
+//import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+
 export default {
   name: "Slick FreshNet",
-  components: {},
+  components: {
+    //VueSlickCarousel
+  },
   data() {
     return {};
   },
@@ -31,7 +46,9 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import "../../scss/colors";
+
 .slick-home {
   display: flex;
   background: #fff;

@@ -9,6 +9,10 @@ import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg
 import VueAppear from 'vue-appear';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+
 // Importing Icons
 import {
   faUserSecret,
@@ -67,6 +71,7 @@ const app = createApp(App)
     class: 'appear',
     selector: null,
   })
+  .component('vue-slick-carousel', VueSlickCarousel)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount("#app");
 

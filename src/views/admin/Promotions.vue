@@ -11,7 +11,7 @@
       </div>
       <div class="col-auto"></div>
       <div class="col text-right">
-        <router-link class="btn admin-btn" :to="{ name: 'Admin.Promotions' }">
+        <router-link class="btn admin-btn" :to="{ name: 'Admin.Promotions.New' }">
           New Promotion
         </router-link>
       </div>
