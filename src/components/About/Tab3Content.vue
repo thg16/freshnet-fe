@@ -70,7 +70,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="text-mile">
+        <div class="text-midle">
           <h3>Every mile counts!</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
@@ -241,10 +241,10 @@ export default {
 .map {
   margin: 90px 0;
 }
-.text-mile {
+.text-midle {
   h3 {
-    font-size: 60px;
-    line-height: 73px;
+    font-size: 3rem;
+    line-height: 3.4rem;
     text-align: center;
     margin-bottom: 60px;
   }

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero" :class="{ small: small }">
     <AnimatedBG />
 
     <div class="overlay" :class="{ show: appearOverlay }">
@@ -26,6 +26,10 @@ export default {
       required: true,
       type: Object,
     },
+    small: {
+      default: false,
+      type: Boolean,
+    },
   },
   components: {
     AnimatedBG,
@@ -46,6 +50,14 @@ export default {
 <style lang="scss" scoped>
 .hero {
   height: calc(100vh - 20px);
+
+  &.small {
+    height: calc(43vh - 20px);
+
+    .overlay {
+      height: 70%;
+    }
+  }
 }
 
 .overlay {
@@ -67,19 +79,21 @@ export default {
     text-align: center;
 
     h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 25px;
       color: #fff;
+
       @media (min-width: 1200px) {
-        font-size: 3rem;
+        font-size: 3.4rem;
       }
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       margin-bottom: 10px;
+
       @media (min-width: 1200px) {
-        font-size: 4rem;
+        font-size: 5rem;
       }
     }
   }

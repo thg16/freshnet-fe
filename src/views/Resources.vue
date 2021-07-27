@@ -1,6 +1,6 @@
 <template>
   <div class="resources">
-    <Hero :hero="hero" />
+    <Hero :hero="hero" :small="true" />
     <WaveDivider />
     <Tabs />
   </div>

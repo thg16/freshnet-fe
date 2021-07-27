@@ -6,23 +6,27 @@
           <h2 class="main-title">
             Join our growing community and buy through Fresh-net today
           </h2>
+          <Carousel :autoplay="7000" :settings="{
+            itemsToShow: 5,
+            wrapAround: true,
+          }">
+            <Slide v-for="i in 7" :key="i">
+              <div class='carousel__item'><img src="../../assets/freshNetSlick.png" alt="" /></div>
+            </Slide>
 
-          <!-- <VueSlickCarousel class="multiple-items">
+            <template #addons>
+              <navigation v-if="showNavigation" />
+              <pagination v-if="showPagination" />
+            </template>
+          </Carousel>
+          <!-- <div class="multiple-items">
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
             <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-          </VueSlickCarousel> -->
-          <div class="multiple-items">
-            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-            <div><img src="../../assets/freshNetSlick.png" alt="" /></div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -30,17 +34,22 @@
 </template>
 
 <script>
-//import VueSlickCarousel from 'vue-slick-carousel';
-import 'vue-slick-carousel/dist/vue-slick-carousel.css';
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 export default {
   name: "Slick FreshNet",
   components: {
-    //VueSlickCarousel
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
   data() {
-    return {};
+    return {
+      showNavigation: false,
+      showPagination: true,
+    };
   },
 };
 </script>

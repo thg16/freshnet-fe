@@ -1,6 +1,7 @@
 <template>
   <div class="forum">
     <h2 class="main-title">Welcome to our community forum</h2>
+
     <div class="forum-content">
       <div class="forum-questions">
         <div class="forum-questions-list">
@@ -143,29 +144,50 @@
           </div>
         </div>
       </div>
-      <div class="sidebar"></div>
+      <div class="sidebar">
+        <Sidebar />
+      </div>
     </div>
   </div>
 </template>
+
 <script>
+
+import Sidebar from "@/components/Community/Sidebar.vue";
+
 export default {
   name: "forum",
-  components: {},
+  components: {
+    Sidebar,
+  },
   data() {
     return {};
   },
 };
 </script>
+
 <style lang="scss" scoped>
+
 .forum {
+
+  .forum-content {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 70px;
+    margin-bottom: 80px;
+  }
+
   .main-title {
     margin-bottom: 90px;
   }
+
   .forum-questions {
+
     .forum-questions-list {
       display: flex;
       flex-direction: column;
       gap: 14px;
+
       .grid-item {
         background: #dff1f4;
         border-radius: 54px;
@@ -173,21 +195,26 @@ export default {
         display: grid;
         grid-template-columns: 90px 1fr;
         gap: 15px;
+
         .item-content {
           display: flex;
           flex-direction: column;
           gap: 5px;
+
           .item-content-top-bar {
             display: flex;
             justify-content: space-between;
+
             .name-status {
               display: flex;
               gap: 10px;
               justify-content: center;
               align-items: center;
+
               .title {
                 font-size: 18px;
                 line-height: 1.2;
+
                 .name-user {
                   font-weight: 700;
                 }
@@ -200,15 +227,19 @@ export default {
                 border-radius: 54px;
                 color: #fff;
                 background: #21b3d1;
+
                 &.answered {
                   background: #5ccd62;
                 }
+
                 &.cloned {
                   background: #f8b823;
                 }
+
                 &.reported {
                   background: #d81f44;
                 }
+
                 p {
                   margin-bottom: 0;
                 }
@@ -234,11 +265,13 @@ export default {
       }
     }
   }
+
   .pagination-forum {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 90px 0 30px 0;
+
     .nav-button {
       background: #45595d;
       width: 48px;
@@ -277,11 +310,6 @@ export default {
         }
       }
     }
-  }
-  .forum-content {
-    display: grid;
-    grid-template-columns: 7fr 3fr;
-    gap: 70px;
   }
 }
 </style>

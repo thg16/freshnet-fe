@@ -1,7 +1,8 @@
 <template>
   <div class="terms">
-    <Hero :hero="hero" />
+    <Hero :hero="hero" :small="true" />
     <WaveDivider />
+
     <div class="terms-content">
       <div class="container">
         <div class="row">

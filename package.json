@@ -29,6 +29,8 @@
     "vue-scroll-reveal": "^1.0.11",
     "vue-slick-carousel": "^1.0.6",
     "vue3-carousel": "^0.1.23",
+    "vue3-parallax": "^0.1.3",
+    "vue3-smooth-scroll": "^0.8.1",
     "vuex": "^4.0.0-0",
     "yarn": "^1.22.10"
   },

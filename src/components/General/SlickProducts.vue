@@ -4,220 +4,57 @@
       <div class="row">
         <div class="col-12">
           <h2 class="main-title">{{ title }}</h2>
-          <div class="products-slick main-slick">
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div>
-                      <div class="img-card">
-                        <img src="../../assets/product.png" alt="" />
-                        <div class="icons-img">
-                          <span class="icon selected"
-                            ><i class="fas fa-heart"></i
-                          ></span>
-                          <span class="icon"><i class="fas fa-star"></i></span>
+
+          <Carousel class="products-slick main-slick" :autoplay="7000" :settings="{
+            itemsToShow: 4,
+            wrapAround: true,
+            snapAlign: 'start',
+          }">
+            <Slide v-for="i in 7" :key="i">
+              <div>
+                <div class="card-slick">
+                  <div class="card-item">
+                    <div class="content-card">
+                      <div>
+                        <div class="img-card">
+                          <img src="../../assets/product.png" alt="" />
+                          <div class="icons-img">
+                            <span class="icon selected"
+                              ><i class="fas fa-heart"></i
+                            ></span>
+                            <span class="icon"><i class="fas fa-star"></i></span>
+                          </div>
+                        </div>
+                        <div class="name-card">
+                          <h2>Product Name with two lines 2un</h2>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Aenean eu sem convallis, as.
+                          </p>
                         </div>
                       </div>
-                      <div class="name-card">
-                        <h2>Product Name with two lines 2un</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Aenean eu sem convallis, as.
-                        </p>
+                      <div class="button-product">
+                        <button class="product-buy">Buy for $12,249.90</button>
                       </div>
                     </div>
-                    <div class="button-product">
-                      <button class="product-buy">Buy for $12,249.90</button>
+                    <div class="footer-card">
+                      <span class="footer-card-title">Fresh-net indicators:</span>
+                      <span class="icon green"><i class="fas fa-truck"></i></span>
+                      <span class="icon red"><i class="fas fa-cloud"></i></span>
+                      <span class="icon yellow"
+                        ><i class="fas fa-recycle"></i
+                      ></span>
                     </div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="footer-card-title">Fresh-net indicators:</span>
-                    <span class="icon green"><i class="fas fa-truck"></i></span>
-                    <span class="icon red"><i class="fas fa-cloud"></i></span>
-                    <span class="icon yellow"
-                      ><i class="fas fa-recycle"></i
-                    ></span>
                   </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div>
-                      <div class="img-card">
-                        <img src="../../assets/product.png" alt="" />
-                        <div class="icons-img">
-                          <span class="icon"><i class="fas fa-heart"></i></span>
-                          <span class="icon"><i class="fas fa-star"></i></span>
-                        </div>
-                      </div>
-                      <div class="name-card">
-                        <h2>Supplier Name Inc.</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Aenean eu sem convallis, as.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-product">
-                      <button class="product-buy">Buy for $12,249.90</button>
-                    </div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="footer-card-title">Fresh-net indicators:</span>
-                    <span class="icon green"><i class="fas fa-truck"></i></span>
-                    <span class="icon red"><i class="fas fa-cloud"></i></span>
-                    <span class="icon yellow"
-                      ><i class="fas fa-recycle"></i
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div>
-                      <div class="img-card">
-                        <img src="../../assets/product.png" alt="" />
-                        <div class="icons-img">
-                          <span class="icon"><i class="fas fa-heart"></i></span>
-                          <span class="icon"><i class="fas fa-star"></i></span>
-                        </div>
-                      </div>
-                      <div class="name-card">
-                        <h2>Product Name with two lines 2un</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Aenean eu sem convallis, as.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-product">
-                      <button class="product-buy">Buy for $12,249.90</button>
-                    </div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="footer-card-title">Fresh-net indicators:</span>
-                    <span class="icon green"><i class="fas fa-truck"></i></span>
-                    <span class="icon red"><i class="fas fa-cloud"></i></span>
-                    <span class="icon yellow"
-                      ><i class="fas fa-recycle"></i
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div>
-                      <div class="img-card">
-                        <img src="../../assets/product.png" alt="" />
-                        <div class="icons-img">
-                          <span class="icon"><i class="fas fa-heart"></i></span>
-                          <span class="icon"><i class="fas fa-star"></i></span>
-                        </div>
-                      </div>
-                      <div class="name-card">
-                        <h2>Supplier Name Inc.</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Aenean eu sem convallis, as.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-product">
-                      <button class="product-buy">Buy for $12,249.90</button>
-                    </div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="footer-card-title">Fresh-net indicators:</span>
-                    <span class="icon green"><i class="fas fa-truck"></i></span>
-                    <span class="icon red"><i class="fas fa-cloud"></i></span>
-                    <span class="icon yellow"
-                      ><i class="fas fa-recycle"></i
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div>
-                      <div class="img-card">
-                        <img src="../../assets/product.png" alt="" />
-                        <div class="icons-img">
-                          <span class="icon"><i class="fas fa-heart"></i></span>
-                          <span class="icon"><i class="fas fa-star"></i></span>
-                        </div>
-                      </div>
-                      <div class="name-card">
-                        <h2>Product Name with two lines 2un</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Aenean eu sem convallis, as.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-product">
-                      <button class="product-buy">Buy for $12,249.90</button>
-                    </div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="footer-card-title">Fresh-net indicators:</span>
-                    <span class="icon green"><i class="fas fa-truck"></i></span>
-                    <span class="icon red"><i class="fas fa-cloud"></i></span>
-                    <span class="icon yellow"
-                      ><i class="fas fa-recycle"></i
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div>
-                      <div class="img-card">
-                        <img src="../../assets/product.png" alt="" />
-                        <div class="icons-img">
-                          <span class="icon"><i class="fas fa-heart"></i></span>
-                          <span class="icon"><i class="fas fa-star"></i></span>
-                        </div>
-                      </div>
-                      <div class="name-card">
-                        <h2>Supplier Name Inc.</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Aenean eu sem convallis, as.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-product">
-                      <button class="product-buy">Buy for $12,249.90</button>
-                    </div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="footer-card-title">Fresh-net indicators:</span>
-                    <span class="icon green"><i class="fas fa-truck"></i></span>
-                    <span class="icon red"><i class="fas fa-cloud"></i></span>
-                    <span class="icon yellow"
-                      ><i class="fas fa-recycle"></i
-                    ></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </Slide>
+
+            <template #addons>
+              <navigation v-if="showNavigation" />
+              <pagination v-if="showPagination" />
+            </template>
+          </Carousel>
         </div>
       </div>
     </div>
@@ -225,6 +62,9 @@
 </template>
 
 <script>
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
 export default {
   name: "Slick Products",
   props: {
@@ -233,9 +73,17 @@ export default {
       type: String,
     },
   },
-  components: {},
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   data() {
-    return {};
+    return {
+      showNavigation: true,
+      showPagination: true,
+    };
   },
 };
 </script>
@@ -249,6 +97,7 @@ export default {
   flex-direction: column;
   margin-top: -2px;
   padding: 60px 0 50px 0;
+
   .main-title {
     font-size: 50px;
     line-height: 1.2;
@@ -261,6 +110,7 @@ export default {
 
 .products-slick {
   margin-bottom: 60px;
+
   .slick-slide > div {
     padding: 10px;
     display: flex;
@@ -314,6 +164,7 @@ export default {
   }
   .card-slick {
     position: relative;
+    padding: 20px;
   }
   .card-item {
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.16);

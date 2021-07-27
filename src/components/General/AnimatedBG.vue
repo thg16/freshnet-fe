@@ -115,7 +115,11 @@ export default {
 <style lang="scss" scoped>
 
 .animated-bg.overlay {
-  z-index: 9999;
+  z-index: 99999;
+
+  .blue-bg {
+    z-index: 99999;
+  }
 }
 
 .blue-bg {

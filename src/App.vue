@@ -118,13 +118,14 @@ h2 {
     background: #fff;
     border: none;
     width: 100%;
-    max-width: 520px;
-    border-radius: 54px;
+    max-width: 700px;
+    border-radius: 64px;
     font-family: "Fredoka One", cursive;
     font-size: 2rem;
-    padding: 34px 187px 34px 34px;
+    padding: 25px 187px 25px 34px;
     color: #333;
     outline: none;
+    margin-top: 34px;
   }
 
   button {
@@ -135,7 +136,7 @@ h2 {
     border-radius: 54px;
     font-family: "Fredoka One", cursive;
     font-size: 2rem;
-    padding: 25px 0;
+    padding: 16px 0;
     color: #fff;
     margin-left: -163px;
 

@@ -1,6 +1,6 @@
 <template>
   <div class="community">
-    <Hero :hero="hero" />
+    <Hero :hero="hero" :small="true" />
     <WaveDivider />
     <Tabs />
     <div v-if="url == 'faq'">

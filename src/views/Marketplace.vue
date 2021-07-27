@@ -50,15 +50,5 @@ export default class Marketplace extends Vue {
 </script>
 
 <style lang="scss">
-.marketplace {
-  .big-input {
-    input {
-      max-width: 100%;
-      padding: 25px 170px 25px 25px;
-    }
-    button {
-      padding: 12px 0;
-    }
-  }
-}
+
 </style>

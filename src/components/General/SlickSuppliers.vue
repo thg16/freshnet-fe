@@ -4,110 +4,38 @@
       <div class="row">
         <div class="col-12">
           <h2 class="main-title">{{ title }}</h2>
-          <div class="suppliers-slick main-slick">
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div class="img-card"><i class="fas fa-image"></i></div>
-                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
-                    <span class="icon"
-                      ><i class="fas fa-comment"></i> 1295</span
-                    >
-                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div class="img-card"><i class="fas fa-image"></i></div>
-                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
-                    <span class="icon"
-                      ><i class="fas fa-comment"></i> 1295</span
-                    >
-                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
+
+
+          <Carousel class="suppliers-slick main-slick" :autoplay="7000" :settings="{
+            itemsToShow: 4,
+            wrapAround: true,
+            snapAlign: 'start'
+          }">
+            <Slide v-for="i in 7" :key="i">
+              <div>
+                <div class="card-slick">
+                  <div class="card-item">
+                    <div class="content-card">
+                      <div class="img-card"><i class="fas fa-image"></i></div>
+                      <div class="name-card"><h2>Supplier Name Inc.</h2></div>
+                    </div>
+                    <div class="footer-card">
+                      <span class="icon"><i class="fas fa-heart"></i> 295</span>
+                      <span class="icon"
+                        ><i class="fas fa-comment"></i> 1295</span
+                      >
+                      <span class="icon"><i class="fas fa-star"></i> 4.5</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div class="img-card"><i class="fas fa-image"></i></div>
-                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
-                    <span class="icon"
-                      ><i class="fas fa-comment"></i> 1295</span
-                    >
-                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div class="img-card"><i class="fas fa-image"></i></div>
-                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
-                    <span class="icon"
-                      ><i class="fas fa-comment"></i> 1295</span
-                    >
-                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div class="img-card"><i class="fas fa-image"></i></div>
-                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
-                    <span class="icon"
-                      ><i class="fas fa-comment"></i> 1295</span
-                    >
-                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card-slick">
-                <div class="card-item">
-                  <div class="content-card">
-                    <div class="img-card"><i class="fas fa-image"></i></div>
-                    <div class="name-card"><h2>Supplier Name Inc.</h2></div>
-                  </div>
-                  <div class="footer-card">
-                    <span class="icon"><i class="fas fa-heart"></i> 295</span>
-                    <span class="icon"
-                      ><i class="fas fa-comment"></i> 1295</span
-                    >
-                    <span class="icon"><i class="fas fa-star"></i> 4.5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            </Slide>
+
+            <template #addons>
+              <navigation v-if="showNavigation" />
+              <pagination v-if="showPagination" />
+            </template>
+          </Carousel>
         </div>
       </div>
     </div>
@@ -115,6 +43,9 @@
 </template>
 
 <script>
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
 export default {
   name: "Slick Suppliers",
   props: {
@@ -123,9 +54,17 @@ export default {
       type: String,
     },
   },
-  components: {},
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   data() {
-    return {};
+    return {
+      showNavigation: true,
+      showPagination: true,
+    };
   },
 };
 </script>

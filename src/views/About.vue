@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <Hero :hero="hero" />
+    <Hero :hero="hero" :small="true" />
     <WaveDivider />
     <Tabs />
     <WaveDivider flipX BGcolor="transparent" />

@@ -1,7 +1,8 @@
 <template>
   <div class="privacy">
-    <Hero :hero="hero" />
+    <Hero :hero="hero" :small="true" />
     <WaveDivider />
+
     <div class="privacy-content">
       <div class="container">
         <div class="row">

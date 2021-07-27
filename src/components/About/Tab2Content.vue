@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="text-mile">
+        <div class="text-midle">
           <h2>Just like your Marketplace</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
@@ -18,7 +18,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="text-mile">
+        <div class="text-midle">
           <h2>Easily find the best products</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
@@ -44,14 +44,15 @@ export default {
 
 <style lang="scss" scoped>
 @import "../../scss/colors";
-.text-mile {
+.text-midle {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   h2 {
-    font-size: 60px;
-    line-height: 73px;
+    font-size: 3rem;
+    line-height: 3.4rem;
     text-align: center;
     margin-bottom: 60px;
   }

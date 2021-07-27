@@ -4,43 +4,31 @@
       <div class="row">
         <div class="col-12">
           <h2 class="main-title">Don’t just take our word for it!</h2>
-          <h3 class="main-subtitle">
-            We saved 16% on milk alone! Also Fresh-Net bring us great
-            seasonal<br />
-            produce, they do our buying. Great platform
-          </h3>
-          <div class="testimonial-items">
-            <div>
-              <img src="../../assets/supplier.png" alt="" />
-              <p class="signature">Thiago Santos</p>
-              <span class="username">CEO | Thiago Cruz Co</span>
-            </div>
-            <div>
-              <img src="../../assets/supplier.png" alt="" />
-              <p class="signature">Thiago Santos</p>
-              <span class="username">CEO | Thiago Cruz Co</span>
-            </div>
-            <div>
-              <img src="../../assets/supplier.png" alt="" />
-              <p class="signature">Thiago Santos</p>
-              <span class="username">CEO | Thiago Cruz Co</span>
-            </div>
-            <div>
-              <img src="../../assets/supplier.png" alt="" />
-              <p class="signature">Thiago Santos</p>
-              <span class="username">CEO | Thiago Cruz Co</span>
-            </div>
-            <div>
-              <img src="../../assets/supplier.png" alt="" />
-              <p class="signature">Thiago Santos</p>
-              <span class="username">CEO | Thiago Cruz Co</span>
-            </div>
-            <div>
-              <img src="../../assets/supplier.png" alt="" />
-              <p class="signature">Thiago Santos</p>
-              <span class="username">CEO | Thiago Cruz Co</span>
-            </div>
-          </div>
+
+          <Carousel class="testimonial-items" :autoplay="7000" :settings="{
+            itemsToShow: 1,
+            wrapAround: true,
+          }">
+            <Slide v-for="i in 7" :key="i">
+              <div>
+                <h3 class="main-subtitle">
+                  We saved 16% on milk alone! Also Fresh-Net bring us great
+                  seasonal<br />
+                  produce, they do our buying. Great platform
+                </h3>
+
+                <img src="../../assets/supplier.png" alt="" />
+                <p class="signature">Thiago Santos</p>
+                <span class="username">CEO | Thiago Cruz Co</span>
+              </div>
+            </Slide>
+
+            <template #addons>
+              <navigation v-if="showNavigation" />
+              <pagination v-if="showPagination" />
+            </template>
+          </Carousel>
+
         </div>
       </div>
     </div>
@@ -48,17 +36,31 @@
 </template>
 
 <script>
+
+import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
+
 export default {
   name: "Testimonial Home",
-  components: {},
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
   data() {
-    return {};
+    return {
+      showNavigation: false,
+      showPagination: true,
+    };
   },
 };
 </script>
 
 <style lang="scss">
+
 @import "../../scss/colors";
+
 .testimonial-home {
   display: flex;
   background: #fff;
@@ -66,14 +68,17 @@ export default {
   flex-direction: column;
   margin-top: -2px;
   padding-bottom: 60px;
+
   @media (min-width: 1200px) {
     padding-bottom: 126px;
   }
+
   .main-title {
-    margin-bottom: 45px;
+    margin-bottom: 61px;
     line-height: 1.2;
     font-size: 50px;
   }
+
   .main-subtitle {
     font-family: "Roboto", sans-serif;
     font-size: 24px;

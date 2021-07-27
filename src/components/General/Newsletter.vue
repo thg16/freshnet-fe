@@ -33,18 +33,25 @@ export default {
   position: relative;
   width: 100%;
   height: 35vh;
+
   .main-newsletter-container {
     display: flex;
     position: absolute;
     width: 100%;
     height: 35vh;
   }
+
   .main-newsletter-content {
     margin: auto;
     max-width: 80%;
     color: #fff;
     text-shadow: 0 4px 12px #00000055;
     text-align: center;
+
+    @media screen and (max-width: 1000px) {
+      overflow: hidden;
+    }
+
     h2 {
       margin-bottom: 60px;
       color: #fff;

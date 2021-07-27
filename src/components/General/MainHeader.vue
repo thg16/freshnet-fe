@@ -176,6 +176,7 @@ export default {
     padding: 36px;
     padding-bottom: 0;
     transition: all 0.3s;
+    max-width: 100vw;
 
     .navbar-collapse {
       justify-content: flex-end;

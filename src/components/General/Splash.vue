@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="splash">
     <AnimatedBG />
 
     <div class="overlay" :class="{ show: appearLogo }">
@@ -50,8 +50,8 @@ export default {
     opacity: 1;
   }
 }
-.home {
-  z-index: 2;
+.splash {
+  z-index: 99999;
   position: relative;
 }
 </style>

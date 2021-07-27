@@ -23,7 +23,7 @@
             curae; Sed vitae vulputate nulla.
           </div>
           <div class="item-btn">
-            <ButtonDefault text="Continue reading" href="/resources" />
+            <ButtonDefault text="Continue reading" @click.prevent="detail = true" />
           </div>
         </div>
         <div class="resources-item">
@@ -44,7 +44,7 @@
             curae; Sed vitae vulputate nulla.
           </div>
           <div class="item-btn">
-            <ButtonDefault text="Continue reading" href="/resources" />
+            <ButtonDefault text="Continue reading" @click.prevent="detail = true" />
           </div>
         </div>
         <div class="resources-item">
@@ -65,7 +65,7 @@
             curae; Sed vitae vulputate nulla.
           </div>
           <div class="item-btn">
-            <ButtonDefault text="Continue reading" href="/resources" />
+            <ButtonDefault text="Continue reading" @click.prevent="detail = true" />
           </div>
         </div>
       </div>
@@ -110,7 +110,9 @@ export default {
   name: "Events",
   components: { ButtonDefault, Sidebar, Details },
   data() {
-    return { detail: true };
+    return {
+      detail: false
+    };
   },
 };
 </script>
